@@ -1,5 +1,6 @@
 package controller;
 
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.Optional;
 import javafx.event.ActionEvent;
@@ -96,10 +97,9 @@ public class CadastroUsuariosController {
         }
     }
 
-    void incluir(String nome, String fone, 
-        String login, String senha, String perfil) throws SQLException {
+    void incluir(String nome, String fone, String login, String senha, String perfil) throws SQLException {
         Usuario usuario = new Usuario(nome, fone, login,
-        senha, perfil);
+        senha, perfil, email, aniversario );
         new UsuarioDAO().salvar(usuario);
         if(onUsuarioSalvo != null){
             onUsuarioSalvo.run();

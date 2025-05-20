@@ -3,6 +3,7 @@ package controller;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Date;
 import java.sql.SQLException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -116,10 +117,20 @@ public class ListagemUsuariosController {
                     = new TableColumn<>("Perfil");
             colunaPerfil.setCellValueFactory(u
                     -> u.getValue().perfilProperty());
+            
+            TableColumn<Usuario, String> colunaEmail
+                    = new TableColumn<>("Email");
+            colunaEmail.setCellValueFactory(u
+                    -> u.getValue().emailProperty());
+
+            TableColumn<Usuario, Date> colunaAniversario
+                    = new TableColumn<>("Aniversario");
+            colunaAniversario.setCellValueFactory(u
+                    -> u.getValue().aniversarioProperty());
 
             tabelaUsuarios.getColumns().addAll(colunaID,
                     colunaNome, colunaFone, colunaLogin,
-                    colunaPerfil);
+                    colunaPerfil, colunaEmail, colunaAniversario);
 
 //            tabelaUsuarios.setItems(lista);
             FilteredList<Usuario> listaFiltrada = new

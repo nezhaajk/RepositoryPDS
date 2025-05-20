@@ -40,6 +40,9 @@ public class LoginDAO extends GenericDAO{
 				usuario.setLogin(rs.getString("login"));
 				usuario.setSenha(rs.getString("senha"));
 				usuario.setPerfil(rs.getString("perfil"));
+                                usuario.setEmail(rs.getString("email"));
+                            	usuario.setAniversario(rs.getDate("aniversario"));
+
 			}
 
 			rs.close();
