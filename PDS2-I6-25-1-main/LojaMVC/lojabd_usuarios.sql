@@ -31,6 +31,8 @@ CREATE TABLE `usuarios` (
   `login` varchar(15) NOT NULL,
   `senha` varchar(15) NOT NULL,
   `perfil` varchar(10) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `aniversario` date NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `login_UNIQUE` (`login`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

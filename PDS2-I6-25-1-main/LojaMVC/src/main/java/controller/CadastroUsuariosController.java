@@ -43,6 +43,12 @@ public class CadastroUsuariosController {
 
     @FXML
     private TextField txtTelefone;
+    
+     @FXML
+    private TextField txtEmail;
+     
+     @FXML
+    private Date dateAniversario;
 
     @FXML
     void btnExcluirClick(ActionEvent event) throws SQLException {
@@ -66,11 +72,11 @@ public class CadastroUsuariosController {
         if(usuarioSelecionado == null){
             incluir(txtNome.getText(),
             txtTelefone.getText(), txtLogin.getText(),
-            txtSenha.getText(), cbPerfil.getValue());
+            txtSenha.getText(), cbPerfil.getValue(), txtEmail.getText(),dateAniversario.getText());
         } else {
             alterar(usuarioSelecionado.getId(), txtNome.getText(),
                     txtTelefone.getText(), txtLogin.getText(),
-                    txtSenha.getText(), cbPerfil.getValue());
+                    txtSenha.getText(), cbPerfil.getValue(),txtEmail.getText(),dateAniversario.getText());
         }
     }
 
@@ -94,10 +100,13 @@ public class CadastroUsuariosController {
             txtSenha.setText(user.getSenha());
             cbPerfil.getItems().addAll("admin", "user");
             cbPerfil.setValue(user.getPerfil());
+            txtEmail.setText(user.getEmail());
+            txtAniversario.setText(user.getAniversario());
+
         }
     }
 
-    void incluir(String nome, String fone, String login, String senha, String perfil) throws SQLException {
+    void incluir(String nome, String fone, String login, String senha, String perfil, String email, Date aniversario) throws SQLException {
         Usuario usuario = new Usuario(nome, fone, login,
         senha, perfil, email, aniversario );
         new UsuarioDAO().salvar(usuario);
@@ -110,9 +119,9 @@ public class CadastroUsuariosController {
     }
     
     void alterar(int id, String nome, String fone, String login,
-            String senha, String perfil) throws SQLException{
+            String senha, String perfil, String email, Date aniversario) throws SQLException{
         Usuario usuarioAlterado = new Usuario(id, nome, fone, login,
-        senha, perfil);
+        senha, perfil, email, aniversario);
         new UsuarioDAO().alterar(usuarioAlterado);
         if(onUsuarioSalvo != null){
             onUsuarioSalvo.run();

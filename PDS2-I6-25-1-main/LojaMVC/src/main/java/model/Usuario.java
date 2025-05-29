@@ -19,7 +19,7 @@ public class Usuario implements Serializable {
     private Date aniversario;
 
     // Método construtor com todos os parâmetros
-    public Usuario(int id, String nome, String fone, String login, String senha, String perfil) {
+    public Usuario(int id, String nome, String fone, String login, String senha, String perfil, String email1, Date aniversario1) {
         this.id = id;
         this.nome = nome;
         this.fone = fone;

@@ -44,6 +44,8 @@ public class UsuarioDAO extends GenericDAO {
             usuario.setLogin(rs.getString("login"));
             usuario.setSenha(rs.getString("senha"));
             usuario.setPerfil(rs.getString("perfil"));
+            usuario.setEmail(rs.getString("email"));
+            usuario.setAniversario(rs.getDate("aniversario"));
 
             lista.add(usuario);
         }
@@ -69,6 +71,9 @@ public class UsuarioDAO extends GenericDAO {
             usuario.setLogin(rs.getString("login"));
             usuario.setSenha(rs.getString("senha"));
             usuario.setPerfil(rs.getString("perfil"));
+            usuario.setEmail(rs.getString("email"));
+            usuario.setAniversario(rs.getDate("aniversario"));
+
         }
 
         rs.close();
