@@ -1,3 +1,7 @@
+CREATE DATABASE banco_loja;
+USE banco_loja;
+
+
 CREATE TABLE cliente (
 	id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,

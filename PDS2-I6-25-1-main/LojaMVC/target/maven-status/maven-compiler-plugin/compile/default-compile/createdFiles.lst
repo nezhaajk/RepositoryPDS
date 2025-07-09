@@ -1,0 +1,11 @@
+model\ClienteView$1.class
+model\ClienteView$2.class
+model\ClienteView.class
+model\ProdutoDAO.class
+model\DBConnection.class
+model\Cliente.class
+model\Produto.class
+Main\Main.class
+model\Loja.class
+model\Conexao.class
+model\ClienteDAO.class

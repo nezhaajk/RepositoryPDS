@@ -1,12 +1,13 @@
 package Main;
 
 import java.sql.Date;
+import java.sql.SQLException;
 import model.Cliente;
 import model.ClienteDAO;
 
 public class Main {
     
-    public static void main(String[] args){
+    public static void main(String[] args) throws SQLException{
         ClienteDAO clienteDAO = new ClienteDAO();
         
         //Criar novo cliente
