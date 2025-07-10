@@ -34,7 +34,7 @@ CREATE TABLE `clientes` (
 -- Dumping data for table `clientes`
 LOCK TABLES `clientes` WRITE;
 /*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
-INSERT INTO `clientes` VALUES (1,'João Pedro','47858585898','Rua Clara Schmitz, 93','2007-01-25');
+INSERT INTO `clientes` VALUES (1,'Gabriel','123456789012','Rua Filipinas, 123','2000-02-19');
 /*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -105,7 +105,7 @@ LOCK TABLES `usuarios` WRITE;
 INSERT INTO `usuarios` VALUES 
 (1,'Fulano','234234','fulano','1234','admin','',NULL),
 (2,'Beltrano','234234243','beltrano','1234','user','',NULL),
-(3,'João Pedro ','4758585858','joao','123456','user','joao90090','2004-05-20');
+(3,'Gabriel ','4758585858','gabriel','123456','user','gabriel2007','2000-06-19');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
