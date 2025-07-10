@@ -43,10 +43,10 @@ public class App extends Application {
         //Cria um novo cliente
         Cliente novoCliente = new Cliente();
         
-        novoCliente.setNome("João Pedro");
-        novoCliente.setTelefone("47858585898");
-        novoCliente.setEndereco("Rua Clara Schmitz, 93");
-        novoCliente.setDataNascimento(Date.valueOf("2007-01-25"));
+        novoCliente.setNome("Gabriel");
+        novoCliente.setTelefone("123456789012");
+        novoCliente.setEndereco("Rua Filipinas, 123");
+        novoCliente.setDataNascimento(Date.valueOf("2000-02-14"));
         
         //Insere o cliente no banco de dados
         clienteDAO.inserirCliente(novoCliente);
